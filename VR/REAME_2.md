@@ -1,0 +1,3 @@
+所有结果均在dataset文件夹内，dataset文件夹内的文件夹1_,2_,3_都是放的256*256的原groundtruth彩色图（在文件架color里）和三种灰度图像生成方法的对应图像，分别放在文件夹grey1,grey2,grey3里。对应的生成的上色图像分别在result_1,result_2,result_3三个文件夹内。输出结果的psnr和ssim指标的log分别在结果指标输出这个文件夹下对应的文件夹内。template.txt即为我们自己改进的模型的结果。另在dataset文件夹内附有两个代码，transfer.py用于将图片全部转化为256*256大小方便对比；get_PSNR_SSIM.py用于获得指定文件夹内所有图像对比的psnr和ssim指标值（使用方法：color里放groundtruth，grey里放生成的上色图，图像名字需一一对应）。
+
+主要模型训练测试等代码文件均在my_inst内，详细运行方法见README_1.pdf以及REAME_TRAIN.pdf两个文件。注意，模型参数、训练数据集等文件因为文件过大无法从服务器上下载，故已全部删除，但是想要运行的话按照readme来做并不难完成。
